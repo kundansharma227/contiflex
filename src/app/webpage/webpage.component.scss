@@ -1,0 +1,225 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+
+.header{
+  background-image: linear-gradient(to top, rgba(221, 251, 255, 0.763), rgb(228, 250, 246));
+  
+  
+}
+.collapse{
+  justify-content:end;
+  font-weight: 700;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: rgb(121, 7, 7);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(139, 248, 212);
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+/////footer
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+/////chat
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+
+////////////////Accordion menu
+.accordion{
+  max-width: 250px;
+  font-size: auto;
+  padding: 1rem;
+  color: rgb(11, 7, 63);
+  background: rgba(170, 168, 168, 0.807);
+  // display: none;
+  position: fixed;
+  border-radius: 10px;
+  bottom: 20px;
+  right: 20px;
+  // border: 1px solid #f1f1f100;
+  z-index: 9;
+}
+
+.accordion-tab > .accordion-toggle{
+  position: absolute;
+  display: none;
+}
+
+.accordion-tab > label{
+  color: rgb(34, 43, 98);
+  background-image: linear-gradient(rgba(80, 251, 222, 0.814),rgb(244, 240, 240));
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  position: relative;
+  display: block;
+  padding: 13px 40px 13px 20px;
+  border-top: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.accordion-tab > .accordion-content{
+  max-height: 0;
+  transition: all .40s;
+  overflow: hidden;
+}
+
+.accordion-tab > label:after {
+  content: '\f078';
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  font-family: fontawesome;
+  transform: rotate(90deg);
+  transition:transform .30s ;
+}
+
+.accordion-tab > .accordion-toggle:checked ~ label:after{
+  transform: rotate(0deg);
+}
+
+.accordion-tab > .accordion-toggle:checked ~ .accordion-content{
+  max-height: 100vh;
+}
+
+.accordion-tab > .accordion-content p {
+  margin: 15px 0;
+  padding: 0 20px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.accordion-tab textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #fffdfd;
+  resize: none;
+  min-height: 200px;
+}
+.accordion-tab .btn {
+  background-image: linear-gradient(rgb(123, 238, 8),rgb(223, 250, 196));
+  color: rgb(46, 44, 44);
+  padding: 16px 20px;
+  
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  // opacity: 0.8;
+}
